@@ -1,20 +1,5 @@
 <h1 align="center">
 <a href='#'><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px"/></a>
-  <br>
-  <br>
-  <div>
-    <a href="https://github.com/redyf/nixdots/issues">
-        <img src="https://img.shields.io/github/issues/redyf/nixdots?color=fab387&labelColor=303446&style=for-the-badge">
-    </a>
-    <a href="https://github.com/redyf/nixdots/stargazers">
-        <img src="https://img.shields.io/github/stars/redyf/nixdots?color=ca9ee6&labelColor=303446&style=for-the-badge">
-    </a>
-    <a href="https://github.com/redyf/nixdots/blob/master/LICENSE">
-        <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=ca9ee6&colorA=313244&colorB=cba6f7"/>
-    </a>
-    <br>
-    </div>
-   </h1>
    <br>
 
 <div align="center">
@@ -22,7 +7,11 @@
 ❄️ NixOS dotfiles ❄️
 </h1>
 </div>
-<h2 align="center">NixOS system configuration. Feel free to explore!</h2>
+<h2 align="center">
+  NixOS system configuration
+  <br>
+  Based on Redyf's configuration: <a href="https://github.com/Redyf"><strong>CHECK HIS WORK</strong></a>
+</h2>
 
 ## Special thanks to:
 
@@ -78,7 +67,7 @@ rebuild
 OR
 
 ```
-sudo nixos-rebuild switch --flake '.#redyf'
+sudo nixos-rebuild switch --flake '.#vincent'
 ```
 
 - Connect to internet (Change what's inside the brackets with your info).
@@ -138,30 +127,24 @@ nix-shell -p git nixUnstable neovim
 mkdir -p /mnt/etc/
 
 # clone the repo
-git clone https://github.com/redyf/nixdots.git /mnt/etc/nixos --recurse-submodules
+git clone https://github.com/vincent-hd/nixdots.git /mnt/etc/nixos --recurse-submodules
 
 # remove this file
-rm /mnt/etc/nixos/hosts/redyf/hardware-configuration.nix
+rm /mnt/etc/nixos/hosts/vincent/hardware-configuration.nix
 
 # generate the config and take some files
 nixos-generate-config --root /mnt
 rm /mnt/etc/nixos/configuration.nix
-mv /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/hosts/redyf
+mv /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/hosts/vincent
 
 # make sure you're in this path
 cd /mnt/etc/nixos
 
 # Install my config:
-nixos-install --flake '.#redyf'
+nixos-install --flake '.#vincent'
 
 # Obs:
-If you'd like to use my config as a template, all you need to do is replace "redyf" with your username.
+If you'd like to use my config as a template, all you need to do is replace "vincent" with your username.
 ```
 
 Credits for the installation section goes to [Stephenstechtalks](https://github.com/stephenstechtalks) and [AlphaTechnolog](https://github.com/AlphaTechnolog) as they helped a lot with their installation guides.
-
-## Conclusion
-
-That should be all! If you have any problem, feel free to make an issue in the github repo. (https://github.com/Redyf/nixdots/issues).
-
-The code is licensed under the MIT license, so you can use or distribute the code however you like. If you have any questions, contact me on Discord: `redyf`.

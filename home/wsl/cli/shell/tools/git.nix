@@ -6,11 +6,11 @@
 }: {
   programs.git = {
     enable = true;
-    userName = "Redyf";
+    userName = "vincent";
     userEmail = "mateusalvespereira7@gmail.com";
     extraConfig = {
       init = {defaultBranch = "main";};
-      github.user = "redyf";
+      github.user = "vincent";
       core.editor = "nvim";
       pull.rebase = false;
     };
