@@ -195,7 +195,7 @@
   users.users.vincent = {
     isNormalUser = true;
     description = "vincent";
-    initialPassword = "red123";
+    initialPassword = "123456";
     shell = pkgs.zsh;
     extraGroups = ["networkmanager" "wheel" "input" "docker" "libvirtd"];
   };
