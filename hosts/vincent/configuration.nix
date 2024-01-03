@@ -221,7 +221,7 @@
   };
 
   # Configure console keymap
-  console.keyMap = "br-abnt2";
+  console.keyMap = "fr";
 
   # Enable sound with pipewire.
   sound.enable = true;
