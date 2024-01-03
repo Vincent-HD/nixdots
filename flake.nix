@@ -1,5 +1,5 @@
 {
-  description = "Redyf's NixOS config for desktop, laptop and WSL";
+  description = "Vincent's NixOS config for desktop, laptop and WSL based on Redyf work";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -36,7 +36,7 @@
     ...
   } @ inputs: {
     nixosConfigurations = {
-      redyf =
+      vincent =
         nixpkgs.lib.nixosSystem
         {
           system = "x86_64-linux";
@@ -48,14 +48,14 @@
               ;
           };
           modules = [
-            ./hosts/redyf/configuration.nix
+            ./hosts/vincent/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = false;
                 extraSpecialArgs = {inherit inputs spicetify-nix;};
-                users.redyf = ./home/desktop/home.nix;
+                users.vincent = ./home/desktop/home.nix;
               };
             }
             hyprland.nixosModules.default
@@ -75,7 +75,7 @@
               useUserPackages = true;
               useGlobalPkgs = false;
               extraSpecialArgs = {inherit inputs;};
-              users.redyf = ./home/laptop/laptop.nix;
+              users.vincent = ./home/laptop/laptop.nix;
             };
           }
           hyprland.nixosModules.default

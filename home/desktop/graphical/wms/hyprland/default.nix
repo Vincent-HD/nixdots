@@ -33,7 +33,7 @@ in {
       };
 
       input = {
-        kb_layout = "br";
+        kb_layout = "fr";
         kb_variant = "";
         kb_model = "";
         kb_options = "";

@@ -16,13 +16,13 @@
                   export PATH=$PATH:~/.local/bin/
                   export PATH=/tmp/lazy-lvim/bin:$PATH
                   export PATH="$HOME/.emacs.d/bin:$PATH"
-                  export PATH="$PATH:/home/redyf/.nix-profile/bin/elixir"
-                  export PATH="$PATH:/home/redyf/.nix-profile/bin/swww"
-                  export PATH="$PATH:/home/redyf/.nix-profile/bin/swww-daemon"
+                  export PATH="$PATH:/home/vincent/.nix-profile/bin/elixir"
+                  export PATH="$PATH:/home/vincent/.nix-profile/bin/swww"
+                  export PATH="$PATH:/home/vincent/.nix-profile/bin/swww-daemon"
                   export PATH="$PATH:$FORGIT_INSTALL_DIR/bin"
-                  export PATH="$PATH:/home/redyf/.config/nvim/bin"
-                  export PATH="$PATH:/home/redyf/.config/nyoom.nvim/bin"
-                  NIX_PATH="$NIX_PATH:nixpkgs-overlays=/home/redyf/flake/overlays/"
+                  export PATH="$PATH:/home/vincent/.config/nvim/bin"
+                  export PATH="$PATH:/home/vincent/.config/nyoom.nvim/bin"
+                  NIX_PATH="$NIX_PATH:nixpkgs-overlays=/home/vincent/flake/overlays/"
 
                   # Neovim config switcher
                   alias nvim-lunar="NVIM_APPNAME=LunarVim nvim"

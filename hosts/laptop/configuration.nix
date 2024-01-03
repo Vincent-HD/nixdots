@@ -192,10 +192,10 @@
     #jack.enable = true;
   };
 
-  users.users.redyf = {
+  users.users.vincent = {
     isNormalUser = true;
-    description = "redyf";
-    initialPassword = "red123";
+    description = "vincent";
+    initialPassword = "123456";
     shell = pkgs.zsh;
     extraGroups = ["networkmanager" "wheel" "input" "docker" "libvirtd"];
   };
